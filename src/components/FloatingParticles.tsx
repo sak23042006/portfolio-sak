@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { useTheme } from './ThemeProvider';
 
@@ -10,6 +9,16 @@ interface FloatingParticlesProps {
   className?: string;
 }
 
+interface Particle {
+  x: number;
+  y: number;
+  size: number;
+  speedX: number;
+  speedY: number;
+  color: string;
+  opacity: number;
+}
+
 const FloatingParticles = ({
   count = 20,
   size = 5,
@@ -18,7 +27,7 @@ const FloatingParticles = ({
   className = ''
 }: FloatingParticlesProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<any[]>([]);
+  const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | null>(null);
   const { theme } = useTheme();
 

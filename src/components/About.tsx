@@ -1,6 +1,5 @@
 import { useRef, useEffect } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import SkillBar from './SkillBar';
 import AnimatedText from './AnimatedText';
 import { Code, Palette, Globe, BookOpen, Briefcase } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -12,31 +11,31 @@ const skills = [
   },
   {
     category: "Frontend Technologies",
-    items: ["Next.js", "Angular", "React", "HTML", "CSS", "Tailwind CSS"]
+    items: ["Next.js", "Angular", "React", "HTML/CSS", "Tailwind CSS"]
   },
   {
     category: "Backend Technologies",
-    items: ["Node.js(Express.js)", "Spring Boot"]
+    items: ["Node.js (Express.js)", "Spring Boot"]
   },
   {
-    category: "App Development",
-    items: ["React Native"]
+    category: "Mobile Development",
+    items: ["React Native"] // Renamed from "App Development"
   },
   {
     category: "Databases",
     items: ["MongoDB", "MySQL", "PostgreSQL"]
   },
   {
-    category: "Deployment Tools",
-    items: [ "Docker", "AWS S3", "Vercel", "Netlify"]
+    category: "DevOps & Deployment",
+    items: ["Docker", "AWS", "Vercel", "Netlify"]
   },
   {
-    category: "Hosting Platforms",
-    items: ["cPanel", "HostGator", "BigRock", "AWS S3", "Vercel", "Netlify"]
+    category: "Version Control",
+    items: ["Git", "GitHub"]
   },
   {
-    category: "Other Skills",
-    items: ["Github","Git","REST APIs", "Agile Development", "UI/UX Design"]
+    category: "Methodologies & Practices",
+    items: ["REST APIs", "Agile Development", "UI/UX Principles"]
   }
 ];
 

@@ -10,7 +10,7 @@ const projects = [
   {
     id: 1,
     title: "Steps",
-    description: "A Training platform",
+    description: "An enterprise-grade training platform that upskills workforces at scale through engaging, results-driven courses.",
     technologies: [
       "NextJs",
       "Typescript",
@@ -38,7 +38,7 @@ const projects = [
     id: 3,
     title: "CloudSave POC",
     description:
-      "A comprehensive portal for managing insurance claims efficiently, streamlining workflows, and enhancing user experience.",
+      "A cloud-based platform designed for seamless uploading of large files (up to 10GB) with instant download URL generation. Enables secure storage and easy sharing of massive files through cloud infrastructure.",
     technologies: ["React Native", "Typescript", "Backblaze"],
     image:
       "https://www.devteam.space/wp-content/uploads/2021/11/How-to-Build-a-Mobile-App-With-React-Native.jpg",
@@ -49,7 +49,7 @@ const projects = [
     id: 4,
     title: "DevsDev",
     description:
-      "An open forum for developers to share their knowledge and experiences.",
+      "An open developer forum where programmers can post questions, share solutions, and browse technical discussions.",
     technologies: ["React", "JavaScript", "ExpressJs", "MongoDB"],
     image: "/devsdev-web.png",
     github: "https://github.com/sak23042006/S54_Arunkumar_Capstone_DevsDev.git",

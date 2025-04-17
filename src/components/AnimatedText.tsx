@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -78,7 +77,7 @@ const AnimatedText = ({
   // Create the appropriate element based on the tag prop
   return (
     <Tag
-      ref={containerRef as React.RefObject<any>}
+      ref={containerRef as unknown as React.RefObject<HTMLHeadingElement>}
       className={cn(className)}
     >
       {characters}
