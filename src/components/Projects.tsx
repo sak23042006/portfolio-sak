@@ -36,6 +36,17 @@ const projects = [
   },
   {
     id: 3,
+    title: "SupBot",
+    description:
+      "A chatbot that delivers real-time news based on user queries, fetching relevant updates from trusted sources directly in WhatsApp.",
+    technologies: ["Python", "Twilio", "NewsAPI"],
+    image:
+      "https://files.helpdocs.io/9e3syfbzn8/articles/1bzxcqsvrm/1663561722197/twilio-for-whats-app-logo.png",
+    github: "https://github.com/sak23042006/supBot",
+    category: "Automation",
+  },
+  {
+    id: 4,
     title: "CloudSave POC",
     description:
       "A cloud-based platform designed for seamless uploading of large files (up to 10GB) with instant download URL generation. Enables secure storage and easy sharing of massive files through cloud infrastructure.",
@@ -45,21 +56,10 @@ const projects = [
     github: "https://github.com/frugalnova-dev",
     category: "Mobile Apps",
   },
-  {
-    id: 4,
-    title: "DevsDev",
-    description:
-      "An open developer forum where programmers can post questions, share solutions, and browse technical discussions.",
-    technologies: ["React", "JavaScript", "ExpressJs", "MongoDB"],
-    image: "/devsdev-web.png",
-    github: "https://github.com/sak23042006/S54_Arunkumar_Capstone_DevsDev.git",
-    link: "https://devsdev.vercel.app",
-    category: "Web Development",
-  },
 ];
 
 // Categories for filtering
-const categories = ["All", "Web Development", "UI/UX Design", "Mobile Apps"];
+const categories = ["All", "Web Development", "UI/UX Design", "Mobile Apps" ,"Automation"];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -132,17 +132,15 @@ const Projects = () => {
                   <div
                     onMouseEnter={() => setHoveredProject(project.id)}
                     onMouseLeave={() => setHoveredProject(null)}
-                    className="relative aspect-video overflow-hidden"
+                    className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden flex items-center justify-center"
                   >
-                    <div
-                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 transform"
-                      style={{
-                        backgroundImage: `url(${project.image})`,
-                        transform:
-                          hoveredProject === project.id
-                            ? "scale(1.1)"
-                            : "scale(1)",
-                      }}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className={`object-cover w-full h-full transition-transform duration-700 ${
+                        hoveredProject === project.id ? "scale-110" : "scale-100"
+                      }`}
+                      style={{ borderRadius: "0.75rem" }}
                     />
                   </div>
 

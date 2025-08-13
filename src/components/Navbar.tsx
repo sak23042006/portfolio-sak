@@ -11,11 +11,13 @@ const Navbar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const links = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '/#' },
+    { label: 'About', href: '/#about' },
+    { label: 'Projects', href: '/#projects' },
+    { label: 'Contact', href: '/#contact' },
     { label: 'Resume', href: 'https://drive.google.com/file/d/1dERexgqi8eApYes54dp89-mrEO0Z7HfC/view?usp=sharing', isExternal: true },
+    { label: 'Tech Profiles', href: '/techProfiles', isExternal: true },
+    { label: 'Work With Me', href: '/work-with-me', isExternal: true },
   ];
 
   useEffect(() => {
@@ -67,8 +69,8 @@ const Navbar = () => {
   }, [isOpen]);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith('http')) {
-      return; // Let the default behavior handle external links
+    if (href.startsWith('http') || href.startsWith('/')) {
+      return;
     }
     e.preventDefault();
     document.querySelector(href)?.scrollIntoView({
