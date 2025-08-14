@@ -26,6 +26,12 @@ const profiles = [
     color: "bg-orange-100 text-orange-700",
   },
   {
+    name: "Credly",
+    url: "https://www.credly.com/users/arun-kumar-s.7a75114f/badges#credly",
+    icon: "credly.png",
+    color: "bg-orange-100 text-orange-800",
+  },
+  {
     name: "Wellfound",
     url: "https://wellfound.com/u/arun-kumar-s-60",
     icon: "wellfound.png",
@@ -50,11 +56,18 @@ const profiles = [
     color: "bg-blue-100 text-blue-700",
   },
   {
+    name: "Fiverr",
+    url: "https://www.fiverr.com/sak2304?public_mode=true",
+    icon: "fiverr.png",
+    color: "bg-green-100 text-green-700",
+  },
+  {
     name: "Portfolio",
     url: "https://dp9plo9wq0xua.cloudfront.net",
     icon: "portfolio.png",
     color: "bg-yellow-100 text-yellow-800",
   },
+  
   {
     name: "Kalvium Portfolio",
     url: "https://app.kalvium.community/showcase/arunkumar9526",
